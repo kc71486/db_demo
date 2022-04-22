@@ -13,7 +13,9 @@ connection.connect(err => {
 })
 
 // Step 2 code goes here
-
+connection.query('CREATE TABLE IF NOT EXISTS student (id VARCHAR(10), name VARCHAR(30), cid VARCHAR(30))')
+connection.query('CREATE TABLE IF NOT EXISTS course (id VARCHAR(10), name VARCHAR(30))')
+connection.query('CREATE TABLE IF NOT EXISTS score (id VARCHAR(10), score VARCHAR(10))')
 // Step 3 code goes here
 
 // Step 4 code goes here
