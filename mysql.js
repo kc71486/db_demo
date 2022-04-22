@@ -22,7 +22,15 @@ connection.query('show TABLES', function (error, results, fields) {
   console.log('There are tables: ', results)
 })
 // Step 3 code goes here
-
+connection.query('INSERT INTO student (id, name, cid) VALUES ("E24086234", "kc71486", "W0001"), ("A12345679", "StudentB", "M0001")', (err, result) => {
+  if (err) console.log('fail to insert:', err)
+})
+connection.query('INSERT INTO course (id, name) VALUES ("W0001", "Web Programming"), ("M0001", "Machine Learning"), [your course]', (err, result) => {
+  if (err) console.log('fail to insert:', err)
+})
+connection.query('INSERT INTO score (id, score) VALUES ("E24086234", 80), ("A123456789", 90)', (err, result) => {
+  if (err) console.log('fail to insert:', err)
+})
 // Step 4 code goes here
 
 // Step 5 code goes here
